@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.VetController.ManageHistoryController">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="632.0" layoutX="-27.0" layoutY="62.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/petscreen.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="63.0" prefWidth="593.0" style="-fx-background-color: #9a946f;">
+         <children>
+            <Button layoutX="492.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="398.0" layoutY="16.0" mnemonicParsing="false" onAction="#gohome" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="199.0" layoutY="108.0" prefHeight="46.0" prefWidth="187.0" style="-fx-background-color: #9a946f;" text="          Manage History" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="151.0" layoutY="177.0" prefHeight="128.0" prefWidth="298.0" style="-fx-background-color: #9a946f;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#ViewPrescription" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="View History">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#AddPrescription" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Add History" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#DeletePrescription" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Delete History" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#godashboard" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

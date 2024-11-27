@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.vetmanagementsystem.ViewCartController">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="632.0" layoutX="-24.0" layoutY="53.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/petscreen.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="CartTable" layoutX="42.0" layoutY="104.0" prefHeight="229.0" prefWidth="503.0" style="-fx-background-color: #9a946f; -fx-background-radius: 10; -fx-border-radius: 5; -fx-padding: 10;">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="134.66668701171875" text="Name" />
+            <TableColumn fx:id="quantityCol" prefWidth="118.66668701171875" text="Quantity" />
+            <TableColumn fx:id="priceCol" prefWidth="130.66668701171875" text="Price" />
+            <TableColumn fx:id="subtotalCol" prefWidth="101.33331298828125" text="Subtotal" />
+         </columns>
+      </TableView>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="63.0" prefWidth="593.0" style="-fx-background-color: #9a946f;">
+         <children>
+            <Button fx:id="logoutButton" layoutX="492.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeButton" layoutX="405.0" layoutY="16.0" mnemonicParsing="false" onAction="#gohome" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="checkoutButton" layoutX="425.0" layoutY="343.0" mnemonicParsing="false" onAction="#checkout" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Checkout">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Button fx:id="updateButton" layoutX="174.0" layoutY="343.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Update Quantity">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Label fx:id="cartLabel" layoutX="42.0" layoutY="78.0" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #9a946f;" text="  CART" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="removeButton" layoutX="300.0" layoutY="343.0" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Remove From Cart">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Button fx:id="backButton" layoutX="42.0" layoutY="343.0" mnemonicParsing="false" onAction="#goback" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Continue Shopping">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.vetmanagementsystem.BuyMedicineScreenController">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="632.0" layoutX="-24.0" layoutY="53.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/petscreen.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="PharTable" layoutX="42.0" layoutY="104.0" prefHeight="229.0" prefWidth="503.0" style="-fx-background-color: #9a946f; -fx-background-radius: 10; -fx-border-radius: 5; -fx-padding: 10;">
+         <columns>
+            <TableColumn fx:id="PharName" prefWidth="91.33331298828125" text="Name" />
+            <TableColumn fx:id="PharLoc" prefWidth="244.0" text="Location" />
+            <TableColumn fx:id="PharCont" prefWidth="159.19998168945312" text="Contact" />
+         </columns>
+      </TableView>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="63.0" prefWidth="593.0" style="-fx-background-color: #9a946f;">
+         <children>
+            <Button layoutX="492.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="405.0" layoutY="16.0" mnemonicParsing="false" onAction="#gohome" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="304.0" layoutY="343.0" mnemonicParsing="false" onAction="#SelectMedicine" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Select Pharmacy">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Button layoutX="432.0" layoutY="343.0" mnemonicParsing="false" onAction="#goback" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Back">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Label layoutX="42.0" layoutY="78.0" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: #9a946f;" text="  AVAILABLE PHARMACIES" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

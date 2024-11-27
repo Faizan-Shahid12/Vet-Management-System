@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.AdminController.ManageAccountsController">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="632.0" layoutX="-24.0" layoutY="53.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/petscreen.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="63.0" prefWidth="593.0" style="-fx-background-color: #9a946f;">
+         <children>
+            <Button layoutX="492.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="405.0" layoutY="16.0" mnemonicParsing="false" onAction="#gohome" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="212.0" layoutY="259.0" mnemonicParsing="false" onAction="#gohome" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Back">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Label layoutX="197.0" layoutY="74.0" prefHeight="39.0" prefWidth="173.0" style="-fx-background-color: #9a946f;" text="       Manage Accounts" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="110.0" layoutY="146.0" prefHeight="103.0" prefWidth="347.0" style="-fx-background-color: #9a946f;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.79998779296875" minWidth="10.0" prefWidth="174.20001220703125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.4000244140625" minWidth="10.0" prefWidth="167.79998779296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#manageAdmin" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Authenticate Admins">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#manageVet" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Authenticate Vets" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="3.0" />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

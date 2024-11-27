@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sda.VetController.AddHistoryController">
+   <children>
+      <ImageView fitHeight="388.0" fitWidth="632.0" layoutX="-24.0" layoutY="53.0" opacity="0.26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/petscreen.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-3.0" layoutY="-2.0" prefHeight="63.0" prefWidth="593.0" style="-fx-background-color: #9a946f;">
+         <children>
+            <Button fx:id="logoutButton" layoutX="492.0" layoutY="16.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Logout">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeButton" layoutX="405.0" layoutY="16.0" mnemonicParsing="false" onAction="#gohome" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Home">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutX="54.0" layoutY="70.0" prefHeight="266.0" prefWidth="486.0" style="-fx-background-color: #9a946f; -fx-background-radius: 20; -fx-border-radius: 10; -fx-padding: 15;">
+         <children>
+            <GridPane prefHeight="252.0" prefWidth="456.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="symptomsLabel" prefHeight="32.0" prefWidth="161.0" text="                   Symptoms">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="diagnosisLabel" prefHeight="32.0" prefWidth="161.0" text="                   Diagnosis" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="treatmentLabel" prefHeight="32.0" prefWidth="161.0" text="             Treatment Details" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateLabel" prefHeight="32.0" prefWidth="161.0" text="                       Date" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="apptdatePicker" prefHeight="25.0" prefWidth="293.0" style="-fx-background-radius: 10; -fx-padding: 2;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="DiagField" onKeyPressed="#EnterinDiagBox" />
+                        <ComboBox fx:id="DiagBox" onKeyPressed="#DeleteFromDiagBox" prefHeight="26.0" prefWidth="277.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="TreatField" onKeyPressed="#EnterinTreatBox" />
+                        <ComboBox fx:id="TreatBox" onKeyPressed="#DeleteFromTreatBox" prefHeight="26.0" prefWidth="277.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="SympField" onKeyPressed="#EnterinSympBox" />
+                        <ComboBox fx:id="SympBox" onKeyPressed="#DeleteFromSympBox" prefHeight="26.0" prefWidth="277.0" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button fx:id="addhistoryButton" layoutX="106.0" layoutY="349.0" mnemonicParsing="false" onAction="#addhistory" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Add History">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+      <Button fx:id="backButton" layoutX="315.0" layoutY="349.0" mnemonicParsing="false" onAction="#goback" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #4c4f4c; -fx-text-fill: white;" text="Back">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
